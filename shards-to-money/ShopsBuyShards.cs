@@ -2,6 +2,7 @@ using HarmonyLib;
 
 namespace shards_to_money;
 
+// This sucks, but in order to do what I actually want I probably need an ItemChanger for Silksong
 [HarmonyPatch(typeof(ShopItem))]
 public sealed class ShopsBuyShards
 {

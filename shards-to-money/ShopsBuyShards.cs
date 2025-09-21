@@ -6,7 +6,7 @@ namespace shards_to_money;
 [HarmonyPatch(typeof(ShopItem))]
 internal sealed class ShopsBuyShards
 {
-    private const int ShardCost = 140;
+    private const int ShardCost = 200;
 
     [HarmonyPatch(nameof(ShopItem.CurrencyType), MethodType.Getter)]
     [HarmonyPostfix]

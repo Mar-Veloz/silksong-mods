@@ -10,6 +10,7 @@ public partial class Plugin : BaseUnityPlugin
     {
         Harmony.CreateAndPatchAll(typeof(NoShardCostTools));
         Harmony.CreateAndPatchAll(typeof(ShopsBuyShards));
+        Harmony.CreateAndPatchAll(typeof(MagnetPullsShards));
 
         Logger.LogInfo($"Plugin {Name} ({Id}) has loaded!");
     }

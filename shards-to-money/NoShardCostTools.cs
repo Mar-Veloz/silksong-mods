@@ -4,7 +4,7 @@ using static ToolItem;
 namespace shards_to_money;
 
 [HarmonyPatch(typeof(ToolItem))]
-public sealed class NoShardCostTools
+internal sealed class NoShardCostTools
 {
     [HarmonyPatch(nameof(ToolItem.ReplenishResource), MethodType.Getter)]
     [HarmonyPostfix]

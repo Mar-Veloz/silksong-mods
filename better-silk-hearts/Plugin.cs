@@ -17,7 +17,7 @@ public partial class Plugin : BaseUnityPlugin
 
     [HarmonyPatch(typeof(PlayerData), nameof(PlayerData.CurrentSilkRegenMax), MethodType.Getter)]
     [HarmonyPrefix]
-    private static void CurrentSilkRegenMaxReplacement(ref PlayerData __instance, ref int __result, ref bool __runOriginal)
+    private static void CurrentSilkRegenMaxReplacement(ref int __result, ref bool __runOriginal, PlayerData __instance)
     {
         __result = __instance.silkRegenMax * SilkRegenMaxMultiplier;
 
